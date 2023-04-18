@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post "/signup", to: "sessions#create"
+  delete "/logout", to: "sessions#detsroy"
+
+  post "/signup", to: "users#create"
+  get "/me", to: "users#show"
+  
 end
